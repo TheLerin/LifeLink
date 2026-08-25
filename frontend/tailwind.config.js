@@ -7,6 +7,7 @@ export default {
         // Dark navy navigation shell (blueprint section 28).
         navy: {
           50: "#f4f6fb",
+          100: "#c7cee3",
           700: "#1e2a4a",
           800: "#16203a",
           900: "#0f172b",
