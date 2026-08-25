@@ -92,25 +92,25 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen bg-navy-950">
-      {/* Brand panel */}
-      <div className="relative hidden w-1/2 flex-col justify-between overflow-hidden bg-navy-900 p-10 text-white lg:flex">
-        {/* Background video */}
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          src="/brand-bg.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/brand-bg-poster.jpg"
-        />
-        {/* Navy/blood tint so the footage matches the theme instead of clashing */}
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/90 via-navy-900/85 to-navy-950/95" />
-        <div className="absolute inset-0 bg-blood-900/10 mix-blend-multiply" />
+    <div className="relative flex min-h-screen overflow-hidden bg-navy-950">
+      {/* Background video and overlays */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/brand-bg.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/brand-bg-poster.jpg"
+      />
+      {/* Navy/blood tint so the footage matches the theme instead of clashing */}
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-950/90 via-navy-900/85 to-navy-950/95" />
+      <div className="absolute inset-0 bg-blood-900/10 mix-blend-multiply" />
 
+      {/* Brand panel */}
+      <div className="relative z-10 hidden w-1/2 flex-col justify-between p-10 text-white lg:flex">
         {/* Content sits above the video + overlay */}
-        <div className="relative flex items-center gap-3">
+        <div className="flex items-center gap-3">
           <span className="rounded-xl bg-blood-600 p-2.5">
             <Droplets className="h-7 w-7" aria-hidden="true" />
           </span>
@@ -122,7 +122,7 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <div className="relative max-w-md space-y-6">
+        <div className="max-w-md space-y-6">
           <h1 className="text-3xl font-semibold leading-tight">
             Coordinate donors, inventory and emergencies across hospitals.
           </h1>
@@ -142,15 +142,15 @@ export default function LoginPage() {
           </ul>
         </div>
 
-        <p className="relative text-xs text-navy-100/40">
+        <p className="text-xs text-navy-100/40">
           College DBMS project · PostgreSQL · FastAPI · React. Fictional data
           only — not a medical device and not clinical guidance.
         </p>
       </div>
 
       {/* Sign-in form */}
-      <div className="flex w-full items-center justify-center px-6 py-12 lg:w-1/2">
-        <div className="w-full max-w-sm">
+      <div className="relative z-10 flex w-full items-center justify-center px-6 py-12 lg:w-1/2">
+        <div className="w-full max-w-sm rounded-2xl border border-white/10 bg-navy-950/60 p-8 shadow-2xl backdrop-blur-md">
           <div className="mb-6 lg:hidden">
             <div className="flex items-center gap-2.5">
               <span className="rounded-lg bg-blood-600 p-2 text-white">
