@@ -150,7 +150,7 @@ export default function LoginPage() {
 
       {/* Sign-in form */}
       <div className="relative z-10 flex w-full items-center justify-center px-6 py-12 lg:w-1/2">
-        <div className="w-full max-w-sm rounded-2xl border border-white/10 bg-navy-950/60 p-8 shadow-2xl backdrop-blur-md">
+        <div className="w-full max-w-sm">
           <div className="mb-6 lg:hidden">
             <div className="flex items-center gap-2.5">
               <span className="rounded-lg bg-blood-600 p-2 text-white">
