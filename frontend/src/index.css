@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-slate-100 text-slate-800 antialiased;
+  }
+
+  /* Keyboard focus stays visible for accessibility. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-blood-500 ring-offset-1;
+  }
+}
+
+@layer components {
+  .ll-card {
+    @apply rounded-card border border-slate-200 bg-white shadow-sm;
+  }
+
+  .ll-label {
+    @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-slate-500;
+  }
+
+  .ll-input {
+    @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800
+      placeholder:text-slate-400 focus:border-blood-500 focus:outline-none focus:ring-1
+      focus:ring-blood-500 disabled:cursor-not-allowed disabled:bg-slate-100;
+  }
+
+  .ll-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-3.5 py-2 text-sm
+      font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .ll-btn-primary {
+    @apply ll-btn bg-blood-600 text-white hover:bg-blood-700;
+  }
+
+  .ll-btn-secondary {
+    @apply ll-btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+  }
+
+  .ll-btn-navy {
+    @apply ll-btn bg-navy-800 text-white hover:bg-navy-900;
+  }
+
+  .ll-th {
+    @apply whitespace-nowrap px-4 py-3 text-left text-xs font-semibold uppercase
+      tracking-wide text-slate-500;
+  }
+
+  .ll-td {
+    @apply whitespace-nowrap px-4 py-3 text-sm text-slate-700;
+  }
+}
