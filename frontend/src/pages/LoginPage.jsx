@@ -94,8 +94,23 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen bg-slate-100">
       {/* Brand panel */}
-      <div className="hidden w-1/2 flex-col justify-between bg-navy-900 p-10 text-white lg:flex">
-        <div className="flex items-center gap-3">
+      <div className="relative hidden w-1/2 flex-col justify-between overflow-hidden bg-navy-900 p-10 text-white lg:flex">
+        {/* Background video */}
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          src="/brand-bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/brand-bg-poster.jpg"
+        />
+        {/* Navy/blood tint so the footage matches the theme instead of clashing */}
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/90 via-navy-900/85 to-navy-950/95" />
+        <div className="absolute inset-0 bg-blood-900/10 mix-blend-multiply" />
+
+        {/* Content sits above the video + overlay */}
+        <div className="relative flex items-center gap-3">
           <span className="rounded-xl bg-blood-600 p-2.5">
             <Droplets className="h-7 w-7" aria-hidden="true" />
           </span>
@@ -107,7 +122,7 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <div className="max-w-md space-y-6">
+        <div className="relative max-w-md space-y-6">
           <h1 className="text-3xl font-semibold leading-tight">
             Coordinate donors, inventory and emergencies across hospitals.
           </h1>
@@ -127,7 +142,7 @@ export default function LoginPage() {
           </ul>
         </div>
 
-        <p className="text-xs text-navy-100/40">
+        <p className="relative text-xs text-navy-100/40">
           College DBMS project · PostgreSQL · FastAPI · React. Fictional data
           only — not a medical device and not clinical guidance.
         </p>
