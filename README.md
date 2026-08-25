@@ -12,8 +12,6 @@ React single-page application consumes that API for all six roles.
 `database/` holds the numbered SQL scripts, which are the authoritative schema.
 `backend/` holds the FastAPI application, `frontend/` the React client, `docs/`
 the written documentation, and `tools/` the offline contract checker.
-`frontend_legacy_mockup/` is an archived first design pass that is not part of the
-deliverable; see the notice in its README.
 
 ## Start
 

@@ -11,4 +11,5 @@ htmlcov/
 .idea/
 .vscode/
 *.log
+*.zip
 
